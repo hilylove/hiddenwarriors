@@ -1,15 +1,16 @@
-import styles from "../../styles/Product.module.css";
+import styles from "../../styles/Appointment.module.css";
 import Image from "next/image";
 import { useState } from "react";
 
-const Product = () => {
-  const [hour, setHour] = useState(0);
+const Appointment = () => {
+  //const [hour, setHour] = useState(0);
   const task = {
     id: 1,
     img: "/img/task.png",
     name: "TASK NAME",
-    duration: [1, 2, 3],
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu purus, rhoncus fringilla vestibulum vel, dignissim vel ante. Nulla facilisi. Nullam a urna sit amet tellus pellentesque egestas in in ante.",
+    tasker: "Tasker JOHN",
+    //duration: [1, 2, 3],
+    price: 50,
   };
   return (
     <div className={styles.container}>
@@ -20,10 +21,11 @@ const Product = () => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{task.name}</h1>
-        <span className={styles.price}>${task.duration[hour]}</span>
-        <p className={styles.desc}>{task.desc}</p>
-        <h3 className={styles.choose}>Choose the time</h3>
-        <div className={styles.hours}>
+        <h2 className={styles.tasker}>{task.tasker}</h2>
+        <span className={styles.price}>${task.price}</span>
+        {/* <p className={styles.desc}>{task.desc}</p> */}
+        {/* <h3 className={styles.choose}>Choose the time</h3> */}
+        {/* <div className={styles.hours}>
           <div className={styles.hour} onClick={() => setHour(0)}>
             <Image src="/img/hour.png" alt="" layout="fill" />
             <span className={styles.number}>1</span>
@@ -36,7 +38,7 @@ const Product = () => {
             <Image src="/img/hour.png" alt="" layout="fill" />
             <span className={styles.number}>3</span>
           </div>
-        </div>
+        </div> */}
         <h3 className={styles.choose}>Write additional details</h3>
         <div className={styles.details}>
           <input
@@ -54,4 +56,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Appointment;
