@@ -1,17 +1,18 @@
 .container {
   height: calc(100vh - 100px);
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
 }
 
 .wrapper {
-  display: flex;
+  display: grid;
   flex-direction: column;
 }
 
 .input {
   height: 40px;
+  width: 250px;
   margin-bottom: 20px;
   padding: 0px 10px;
 }

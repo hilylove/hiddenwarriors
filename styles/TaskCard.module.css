@@ -37,6 +37,16 @@
   color: #777;
 }
 
+.button {
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 480px) {
   .container {
     width: 100%;

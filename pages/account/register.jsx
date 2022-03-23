@@ -1,17 +1,18 @@
-import styles from "../../styles/login.module.css";
+import styles from "../../styles/Register.module.css";
 
 const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h1>Login Dashboard</h1>
+        <h1>Register Here</h1>
         <input placeholder="username" className={styles.input} />
         <input
           placeholder="password"
           type="password"
           className={styles.input}
         />
-        <button className={styles.button}>Sign In</button>
+        <button className={styles.button}>Register</button>
+        <button className={styles.button}>Cancel</button>
       </div>
     </div>
   );

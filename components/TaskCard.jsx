@@ -9,7 +9,7 @@ const TaskCard = () => {
       <span className={styles.category}>Category</span>
       <span className={styles.location}>Location</span>
       <span className={styles.price}>Price</span>
-      {/* <p className={styles.desc}>Write some description here.</p> */}
+      <button className={styles.button}>Make an appointment</button>
     </div>
   );
 };
