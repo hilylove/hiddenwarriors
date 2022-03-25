@@ -1,7 +1,15 @@
 import styles from "../styles/TaskCard.module.css";
 import Image from "next/image";
+import axios from "axios";
 
 const TaskCard = () => {
+  axios({
+    method: "get",
+    url: "http://localhost:8080/taskers",
+  }).then(function (response) {
+    console.log(response.data);
+  });
+
   return (
     <div className={styles.container}>
       <Image src="/img/fixmen.png" alt="" width="500" height="500" />
