@@ -1,7 +1,7 @@
 import styles from "../styles/Category.module.css";
 import Image from "next/image";
 
-const Category = () => {
+const Category = ({ onFilter }) => {
   const categories = [
     "cleaning",
     "gardening",
@@ -12,13 +12,17 @@ const Category = () => {
     "carpenter",
   ];
 
+  console.log(`1`, onFilter);
+
   return (
     <div className={styles.container}>
       <div className={styles.item}>
         <ul className={styles.buttons}>
           {categories.map((item) => (
             <li className={styles.buttonItem}>
-              <button className={styles.button}>{item}</button>
+              <button onClick={() => onFilter(item)} className={styles.button}>
+                {item}
+              </button>
             </li>
           ))}
         </ul>
