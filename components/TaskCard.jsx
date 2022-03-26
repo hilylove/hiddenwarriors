@@ -1,22 +1,15 @@
 import styles from "../styles/TaskCard.module.css";
 import Image from "next/image";
-import axios from "axios";
 
-const TaskCard = () => {
-  axios({
-    method: "get",
-    url: "http://localhost:8080/taskers",
-  }).then(function (response) {
-    console.log(response.data);
-  });
-
+const TaskCard = ({ task, cate, loca, pric }) => {
+  console.log(task, cate, loca, pric);
   return (
     <div className={styles.container}>
       <Image src="/img/fixmen.png" alt="" width="500" height="500" />
-      <h1 className={styles.title}>Tasker Name</h1>
-      <span className={styles.category}>Category</span>
-      <span className={styles.location}>Location</span>
-      <span className={styles.price}>Price</span>
+      <h1 className={styles.title}>{task}</h1>
+      <span className={styles.category}>{cate}</span>
+      <span className={styles.location}>{loca}</span>
+      <span className={styles.price}>{pric}</span>
       <button className={styles.button}>Make an appointment</button>
     </div>
   );
